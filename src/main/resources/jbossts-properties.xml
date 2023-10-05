@@ -1,0 +1,33 @@
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+
+<!--FILE SYSTEM LOG PERSISTENCE-->
+<!--<properties>-->
+<!--    &lt;!&ndash; unique id of the embedded transaction manager &ndash;&gt;-->
+<!--    <entry key="CoreEnvironmentBean.nodeIdentifier">1</entry>-->
+<!--    &lt;!&ndash; location of the LRA logs &ndash;&gt;-->
+<!--    <entry key="ObjectStoreEnvironmentBean.objectStoreDir">target/lra-logs</entry>-->
+<!--    &lt;!&ndash; location of the communications store &ndash;&gt;-->
+<!--    <entry key="ObjectStoreEnvironmentBean.communicationStore.objectStoreDir">target/lra-logs</entry>-->
+<!--</properties>-->
+
+<!--POSTGRES DB LOG PERSISTENCE-->
+<properties>
+    <entry key="ObjectStoreEnvironmentBean.objectStoreType">com.arjuna.ats.internal.arjuna.objectstore.jdbc.JDBCStore</entry>
+    <entry key="ObjectStoreEnvironmentBean.jdbcAccess">com.arjuna.ats.internal.arjuna.objectstore.jdbc.accessors.DynamicDataSourceJDBCAccess;ClassName=org.postgresql.ds.PGSimpleDataSource;DatabaseName=jbossts;User=admin;Password=admin;ServerName=localhost;PortNumber=5432</entry>
+    <entry key="ObjectStoreEnvironmentBean.tablePrefix">Action</entry>
+    <entry key="ObjectStoreEnvironmentBean.dropTable">false</entry>
+
+    <entry key="ObjectStoreEnvironmentBean.stateStore.objectStoreType">com.arjuna.ats.internal.arjuna.objectstore.jdbc.JDBCStore</entry>
+    <entry key="ObjectStoreEnvironmentBean.stateStore.jdbcAccess">com.arjuna.ats.internal.arjuna.objectstore.jdbc.accessors.DynamicDataSourceJDBCAccess;ClassName=org.postgresql.ds.PGSimpleDataSource;DatabaseName=jbossts;User=admin;Password=admin;ServerName=localhost;PortNumber=5432</entry>
+    <entry key="ObjectStoreEnvironmentBean.stateStore.tablePrefix">stateStore</entry>
+    <entry key="ObjectStoreEnvironmentBean.stateStore.dropTable">false</entry>
+
+    <entry key="ObjectStoreEnvironmentBean.communicationStore.objectStoreType">com.arjuna.ats.internal.arjuna.objectstore.jdbc.JDBCStore</entry>
+    <entry key="ObjectStoreEnvironmentBean.communicationStore.jdbcAccess">com.arjuna.ats.internal.arjuna.objectstore.jdbc.accessors.DynamicDataSourceJDBCAccess;ClassName=org.postgresql.ds.PGSimpleDataSource;DatabaseName=jbossts;User=admin;Password=admin;ServerName=localhost;PortNumber=5432</entry>
+    <entry key="ObjectStoreEnvironmentBean.communicationStore.tablePrefix">Communication</entry>
+    <entry key="ObjectStoreEnvironmentBean.communicationStore.dropTable">false</entry>
+
+    <entry key="CoreEnvironmentBean.nodeIdentifier">1</entry>
+
+    <entry key="RecoveryEnvironmentBean.periodicRecoveryPeriod">30</entry>
+</properties>
